@@ -1,0 +1,314 @@
+:root {
+    --OURO-SANDOW: #FFD700;
+    --PRETO-ACADEMIA: #0A0A0A;
+    --BRANCO-REVISTA: #F2F2F2;
+    --BRONZE-TAN: #ffbb00;
+    --SOMBRA-PESADA: #161616;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--PRETO-ACADEMIA);
+    color: var(--BRANCO-REVISTA);
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    height: 100px;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+    animation: decima 1s ease-in-out;
+}
+
+nav.sc {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    height: 100px;
+}
+
+@keyframes decima {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.navItems {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 260px;
+    min-height: 60px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navItems img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    display: block;
+}
+
+.navItems:hover {
+    cursor: pointer;
+    background-color: var(--SOMBRA-PESADA);
+}
+
+.navItems .navWords {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: all 200ms linear;
+}
+
+nav.sc .navItems {
+    color: var(--BRANCO-REVISTA);
+    font-weight: 700;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#s1 {
+    background-image: url(..//assets/images/olympia_collage_0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 185px;
+    text-transform: uppercase;
+    color: var(--OURO-SANDOW);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    animation: esquerda 1.5s ease-in-out;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+@keyframes esquerda {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5vw;
+    color: var(--BRONZE-TAN);   
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-align: center;
+    animation: direita 1.5s ease-in-out;
+    line-height: 1.3;
+    padding-bottom: 40px;
+    font-size: 40px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+@keyframes direita {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 80px;
+    background-color: var(--SOMBRA-PESADA);
+    border-top: 2px solid var(--OURO-SANDOW);
+}
+
+footer.ft {
+    background-color: var(--OURO-SANDOW);
+    border-top-color: var(--PRETO-ACADEMIA);
+}
+
+.vid {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    line-height: 0;
+}
+/* Video thumbnail and wrapper */
+.video-wrapper{
+    width: 100%;
+}
+.video-thumb{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6);
+}
+.play-button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+.play-button svg{ filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6)); }
+a{
+    background-color:var(--BRONZE-TAN);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 260px;
+    min-height: 60px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: var(--SOMBRA-PESADA);
+    box-shadow: 0 2px 5px var(--PRETO-ACADEMIA);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    animation: botao 1.5s ease-in-out;
+
+}
+@keyframes botao {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+}
+a:hover{
+    background-color: var(--PRETO-ACADEMIA);
+    color: var(--OURO-SANDOW);
+}
+#s2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 150px;
+    min-height: 70vh;
+    flex-direction: row;
+    padding-top: 500px;
+    
+}
+.card{
+    width: 300px;
+    min-height: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    gap: 20px;
+    align-items: center;
+}
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.arnold-img{
+    width: 100%;
+    height: 760px;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+
+.arnold{
+    width: 100%;
+    height: 725px;
+    display: block;
+    object-fit: cover;
+}
+
+.card h2 {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.divi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#s2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 120px;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+iframe{
+    width: 100%;
+    height: 500px;
+    display: block;
+    border: 30px solid transparent;
+    border-image: url(../images/a64440efa25c06aefb0c53a804fd0f64-removebg-preview.png) 50 round;
+    z-index: 1;
+}
+.borda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 30px solid transparent;
+    border-image: url(../images/a64440efa25c06aefb0c53a804fd0f64-removebg-preview.png) 50 round;
+    pointer-events: none; 
+    z-index: 999;
+}
